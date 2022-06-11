@@ -1,0 +1,385 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* CSS header */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-nav .logo {
+  margin-left: 20px;
+}
+
+.main-nav .menu-nav {
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+.nav-pills {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-pills .nav-item {
+  margin: 0 15px;
+}
+
+.main-nav .phone-number {
+  margin-top: 4px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+.main-nav .phone-number a {
+  color: #fff;
+  text-align: center
+}
+
+.main-nav .phone-number a:hover {
+  text-decoration: none;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: right;
+}
+
+.nav-tab {
+  margin: 0 20px;
+  padding: 0 0 8px 0;
+  font-size: 20px;
+}
+
+.nav-tab:hover {
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+/*----Begin header mobile--- */
+
+.logo-mb {
+  margin-left: -90px;
+  margin-right: 6px !important;
+}
+
+.logo-mb img {
+  width: 150px;
+  height: 50px;
+}
+
+.menu-mb {
+  margin-left: 40px;
+  margin-right: -360px;
+}
+
+.list-menu-mb {
+  margin-right: 46px;
+}
+
+.down-list {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: none !important;
+  ;
+}
+
+/*-----End---- */
+
+/* Nav list  */
+.list_samsung {
+  margin-top: 10px;
+}
+
+.list_samsung .content_list {
+  display: flex;
+  background-color: #f6f1f1;
+  margin: 0 52px;
+  border-radius: 12px;
+}
+
+.content_list .list_items {
+  display: flex;
+  margin: 5px 20px;
+
+}
+
+.list_items img:hover {
+  cursor: pointer;
+}
+
+.text_list1 a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 650;
+}
+
+.text_list1 a:hover {
+  color: #000;
+  text-decoration: none;
+
+}
+
+.text_list2 p {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.text_list1:hover,
+.text_list2:hover {
+  cursor: context-menu;
+}
+
+.content_list {
+  display: none !important;
+}
+
+.active {
+  display: flex !important;
+}
+
+.carousel-indicators .active {
+
+  background-color: #000 !important;
+}
+
+/*---- End header ---- */
+
+/* -----Content ------ */
+
+
+/* Text sub */
+
+.text-sub {
+  margin: 40px;
+}
+
+.text-sub h2{
+  font-size: 48px;
+}
+
+.text-sub h3 {
+  font-size: 24px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {
+  font-style: italic;
+}
+
+/* Add a blue color to the author */
+.author {
+  color: cornflowerblue;
+}
+
+.gia-sp a {
+  font-size: 18px ;
+  text-decoration: none;
+  color: #000;
+}
+.gia-sp a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.gia-sp p {
+  font-size: 16px ;
+  text-decoration: none;
+  color: red;
+}
+
+.gia-sp p:hover {
+  cursor: default;
+}
+
+
+/* sub slider 2 */
+.sub-slider2 .list-sub2 {
+ display: flex;
+ justify-content: center;
+}
+
+.list-sub2 img {
+  width: 370px;
+  height: 270px;
+  border-radius: 5px;
+  margin: 4px;
+}
+/* End sub slider 2 */
+
+
+/* -----End content -----*/
+
+/* -----footer---- */
+.news {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.news2 {
+  font-size: 15.5px;
+  font-weight: 400;
+  color: #7a7a7a;
+}
+
+.email_user {
+  justify-content: center;
+}
+
+.email_test {
+  width: 655px;
+  height: 48px;
+}
+
+.ip_email {
+  max-width: 100%;
+  border: 1px solid #818a91;
+  background-color: transparent;
+  color: #373a3c;
+  vertical-align: middle;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.button_dk {
+  width: 327px;
+}
+
+.btn_dk {
+  background-color: #000 !important;
+}
+
+/* footer */
+
+.more_samcenter {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.more_samcenter p,
+.more_samcenter a,
+.more_samcenter li {
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 16px;
+  color: #1D1D1F;
+  line-height: 36px;
+}
+
+.caption {
+  margin-left: 20px;
+}
+
+.thong_tin {
+  flex: 1.8;
+  overflow: hidden;
+}
+
+.mo_ta {
+  margin-left: 4%;
+  flex: 2;
+}
+
+.widget-container {
+  display: block;
+  width: 40%;
+  margin: 8% 0 0 4%;
+  column-gap: 0px;
+  text-align: left;
+  font-family: "SamsungOne", Sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.widget-container:hover {
+  cursor: default;
+}

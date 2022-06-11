@@ -1,0 +1,147 @@
+/* PC */
+@media(min-width: 1024px) {
+    .menu-nav-mb,
+    .menu-lists-mb,
+    .header-mb {
+        display: none ;
+    }
+    
+}
+
+/* Tablet */
+@media(min-width:740px) and (max-width: 1023px) {
+    .menu-nav-mb {
+        display: none ;
+    }
+    .menu-lists-mb{
+        display: none;
+      }
+    
+}
+
+/* Moblie */
+@media (max-width: 768px) {
+    .main-nav,
+    .list_news,
+    .list_samsung,
+    .tabs-control,
+    .menu-nav {
+        display: none;
+    }
+
+    .header-mb {
+        display: flex;
+    }
+
+    .more_samcenter {
+        flex-direction: column;
+    }
+
+    .thong_tin {
+        margin: 8px 8px;
+    }
+
+    /* header */
+    .logo img {
+        width: 59%;
+    }
+
+    
+
+    .menu-nav-mb {
+        display: flex;
+        align-items: center;
+    }
+    
+    .icon-mb {
+        margin: 10px;
+    }
+
+    .icon-mb i {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .container{
+        position: relative;
+    }
+
+    .menu-lists-mb {
+        position: absolute;
+        background-color: #fff ;
+        box-shadow: -80px 0px rgba(66, 59, 59, 0.25);
+        width: 85%  ;
+        height: 280%;
+        box-shadow: 8px #000 inset;
+        flex-direction: column;
+        display: none;
+        right: 0;
+        z-index: 3;
+    }
+
+    .menu-lists-mb p{
+        font-size: 16px;
+        margin: 12px 32px ;
+    }
+
+    #close-mb-menu {
+        right: 0;
+        position: absolute;
+        justify-content: right;
+        padding: 12px; 
+        margin: 4px;
+        font-size: 12px;
+    }
+
+    .list_mb { 
+        margin-top: 8px;
+    }
+
+    .list-mobile{ /* Danh sách  các dòng điện thoại */
+        margin-top: -1px;
+    }
+
+    .list-mobile li {
+        /* display: none; */
+        margin-left: 8px;
+        margin-bottom:12px;
+        list-style-type: none;
+    }
+    .list-mobile a {
+        
+        font-weight: 500;
+
+    }
+
+    .lists-tablet{ /* Danh sách  các dòng Máy tính bảng */
+        margin-top: -1px;
+    }
+
+    .lists-tablet li {
+        display: none;
+        margin-left: 8px;
+        margin-bottom:12px;
+        list-style-type: none;
+    }
+    .lists-tablet a {
+        
+        font-weight: 500;
+
+    }
+
+
+    /* Content */
+
+    /* Footer */
+    .btn{
+        color: #fff;
+        padding: 5px;
+        border-radius: 4px;
+    }
+    .letter, .email_user{
+        padding: 4px;
+    }
+
+
+
+}
