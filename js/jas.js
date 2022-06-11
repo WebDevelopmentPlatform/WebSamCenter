@@ -134,13 +134,13 @@ function showSlides(n) {
 // End sub slider 1 mobile
 
 // slick js
-
+// $('.autoplay').slick({
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//   });
    
 
 //---End content---
 
-
-/*
-
-
-*/

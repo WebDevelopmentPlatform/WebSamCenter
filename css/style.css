@@ -173,7 +173,7 @@ html {
   margin: 40px;
 }
 
-.text-sub h2{
+.text-sub h2 {
   font-size: 48px;
 }
 
@@ -260,17 +260,18 @@ q {
 }
 
 .gia-sp a {
-  font-size: 18px ;
+  font-size: 18px;
   text-decoration: none;
   color: #000;
 }
+
 .gia-sp a:hover {
   text-decoration: none;
   color: #000;
 }
 
 .gia-sp p {
-  font-size: 16px ;
+  font-size: 16px;
   text-decoration: none;
   color: red;
 }
@@ -292,6 +293,8 @@ q {
   border-radius: 5px;
   margin: 4px;
 }
+
+
 /* End sub slider 2 */
 
 

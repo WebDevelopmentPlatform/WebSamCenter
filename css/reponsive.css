@@ -2,7 +2,8 @@
 @media(min-width: 1024px) {
     .menu-nav-mb,
     .menu-lists-mb,
-    .header-mb {
+    .header-mb,
+    .sub1-mb, .sub2-mb {
         display: none ;
     }
     
@@ -10,12 +11,13 @@
 
 /* Tablet */
 @media(min-width:740px) and (max-width: 1023px) {
-    .menu-nav-mb {
+    .menu-nav-mb,
+    .menu-lists-mb,
+    .header-mb,
+    .sub1-mb,.sub2-mb {
         display: none ;
     }
-    .menu-lists-mb{
-        display: none;
-      }
+    
     
 }
 
@@ -25,7 +27,8 @@
     .list_news,
     .list_samsung,
     .tabs-control,
-    .menu-nav {
+    .menu-nav, .slideshow-container,
+    .sub-slider2 {
         display: none;
     }
 
@@ -45,8 +48,6 @@
     .logo img {
         width: 59%;
     }
-
-    
 
     .menu-nav-mb {
         display: flex;
@@ -131,6 +132,36 @@
 
 
     /* Content */
+
+        /* Sub slider 1 */
+
+        .item-sub1 {
+            display: flex;
+            background-color: #fff;
+        }
+
+        .gia-sp {
+            background-color:#fff ;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .gia-sp p {
+            margin-bottom: 0px;
+        }
+
+        /* sub slider 2 */
+        .sub2-mb img {
+            width: 396px;
+            height: 230px;
+            border-radius: 8px;
+            
+        }
+        .carousel-item img{
+            border-radius: 8px;
+            margin: 2px;
+        }
+
 
     /* Footer */
     .btn{
