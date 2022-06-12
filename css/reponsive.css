@@ -3,7 +3,7 @@
     .menu-nav-mb,
     .menu-lists-mb,
     .header-mb,
-    .sub1-mb, .sub2-mb {
+    .sub1-mb, .sub2-mb, .address-mb {
         display: none ;
     }
     
@@ -14,7 +14,7 @@
     .menu-nav-mb,
     .menu-lists-mb,
     .header-mb,
-    .sub1-mb,.sub2-mb {
+    .sub1-mb,.sub2-mb,.address-mb {
         display: none ;
     }
     
