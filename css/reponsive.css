@@ -11,11 +11,13 @@
 
 /* Tablet */
 @media(min-width:740px) and (max-width: 1023px) {
-    .menu-nav-mb,
-    .menu-lists-mb,
-    .header-mb,
-    .sub1-mb,.sub2-mb,.address-mb {
-        display: none ;
+    .main-nav,
+    .list_news,
+    .list_samsung,
+    .tabs-control,
+    .menu-nav, .slideshow-container,
+    .sub-slider2 {
+        display: none;
     }
     
     
