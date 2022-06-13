@@ -51,9 +51,7 @@
     }
 
     /* header */
-    .logo img {
-        width: 59%;
-    }
+  
 
     .menu-nav-mb {
         display: flex;
@@ -120,7 +118,9 @@
         font-weight: 500;
 
     }
-
+    .menu-mb{
+        margin-left: -28px;
+    }
     .lists-tablet{ /* Danh sách  các dòng Máy tính bảng */
         margin-top: -1px;
     }
