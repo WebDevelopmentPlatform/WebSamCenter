@@ -1,0 +1,314 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/* CSS header */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-nav .logo {
+    margin-left: 20px;
+}
+
+.main-nav .menu-nav {
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.nav-pills {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-pills .nav-item {
+    margin: 0 15px;
+}
+
+.main-nav .phone-number {
+    margin-top: 4px;
+    background-color: #000;
+    border-radius: 5px;
+}
+
+.main-nav .phone-number a {
+    color: #fff;
+    text-align: center
+}
+
+.main-nav .phone-number a:hover {
+    text-decoration: none;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: right;
+}
+
+.nav-tab {
+    margin: 0 20px;
+    padding: 0 0 8px 0;
+    font-size: 20px;
+}
+
+.nav-tab:hover {
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+/*----Begin header mobile--- */
+
+.logo-mb {
+    margin-left: -90px;
+    margin-right: 6px !important;
+}
+
+.logo-mb img {
+    width: 150px;
+    height: 50px;
+}
+
+.menu-mb {
+    margin-left: 40px;
+    margin-right: -300px;
+}
+
+.list-menu-mb {
+    margin-right: 46px;
+}
+
+.down-list {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: none !important;
+    ;
+}
+
+/*-----End---- */
+
+/* Nav list  */
+.list_samsung {
+    margin-top: 10px;
+}
+
+.list_samsung .content_list {
+    display: flex;
+    background-color: #f6f1f1;
+    margin: 0 52px;
+    border-radius: 12px;
+}
+
+.content_list .list_items {
+    display: flex;
+    margin: 5px 20px;
+
+}
+
+.list_items img:hover {
+    cursor: pointer;
+}
+
+.text_list1 a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 650;
+}
+
+.text_list1 a:hover {
+    color: #000;
+    text-decoration: none;
+
+}
+
+.text_list2 p {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.text_list1:hover,
+.text_list2:hover {
+    cursor: context-menu;
+}
+
+.content_list {
+    display: none !important;
+}
+
+.active {
+    display: flex !important;
+}
+
+.carousel-indicators .active {
+
+    background-color: #000 !important;
+}
+
+/*---- End header ---- */
+
+/* Content */
+
+.banner-z {
+    position: relative;
+    background-image: url(../../img/phone/page-phone/galaxyA/backgroundA.png);
+    width: 1440px;
+    height: 328px;
+    margin-top: 4%;
+    background-position-y: center;
+}
+
+.banner-z .text-z {
+    position: absolute;
+    transform: translateX(40%) translateY(100%);
+    align-items: center;
+    justify-content: right;
+}
+
+.banner-z .text-z h2 {
+    font-weight:720;
+    font-size: 40px; 
+}
+
+.lists-phone {
+    margin-top: 2%;
+    margin-left: 6%;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.lists-phone a,
+.lists-phone a:hover {
+    margin-top: 4%;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+}
+
+
+.list-phone {
+    width: 250px;
+    height: 373px;
+    margin: 0 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.list-phone img {
+    width: 200px;
+    height: 150px;
+}
+
+
+.infor-phone button {
+    background-color: #000;
+    color: #fff;
+    width: 130px;
+    height: 41px;
+    padding: 0 12px;
+    border-radius: 24px;
+}
+
+/* End Content */
+
+
+/* Footer */
+.footer {
+    margin-top: 12%;
+}
+
+
+/* Reponsive */
+@media (max-width: 768px) {
+
+    .logo-mb {
+    }
+
+    .banner-z {
+        background-size:800px 630px;
+        background-image: url(../../img/phone/page-phone/phuKienMB/background-mb.jpg);
+        background-position-x: 46%;
+        margin-left: 8%;
+        margin-top: 65%;
+        width: 300px;
+        height: 400px;
+    }
+
+    .banner-z .text-z {
+        position: absolute;
+        transform: translateX(6%) translateY(-160%);
+        align-items: center;
+        text-align: center;
+        justify-content: right;
+    }
+
+
+    .list-phone {
+        /* margin: 0; */
+        width: 200px;
+        height: 280px;
+        margin-left: 24%;
+    }
+
+    .list-phone img {
+        width: 122px;
+        height: 98px;
+    }
+
+    .list-phone .buy-phone {
+        width: 112px;
+        height: 46px;
+        /* align-items: center !important; */
+    }
+
+    .img-phone {
+        margin-left: -26px;
+    }
+
+    .infor-phone {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .list-phone p {
+        width: 60px;
+        font-size: 14px;
+        text-overflow: ellipsis;
+    }
+
+    .list-phone button {
+        width: 120px;
+        height: 30px;
+        margin-left: 32px;
+    }
+
+    .cost-phone-mb {
+        margin-left:65px;
+    }
+
+    .name-phone {
+        width: 110px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 40px !important;
+    }
+}   
