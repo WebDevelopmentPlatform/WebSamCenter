@@ -169,7 +169,7 @@ html {
 
 .banner-z {
     position: relative;
-    background-image: url(../../img/phone/page-phone/galaxyS/03_galaxy_s_pc.jpeg);
+    background-image: url(../../img/phone/page-phone/galaxyA/backgroundA.png);
     width: 1440px;
     height: 328px;
     margin-top: 4%;
@@ -178,9 +178,14 @@ html {
 
 .banner-z .text-z {
     position: absolute;
-    transform: translateX(50%) translateY(220%);
+    transform: translateX(78%) translateY(220%);
     align-items: center;
     justify-content: right;
+}
+
+.banner-z .text-z h2 {
+    font-weight:720;
+    font-size: 40px; 
 }
 
 .lists-phone {
@@ -209,8 +214,8 @@ html {
 }
 
 .list-phone img {
-    width: 240px;
-    height: 160px;
+    width: 200px;
+    height: 150px;
 }
 
 
@@ -240,12 +245,12 @@ html {
 
     .banner-z {
         background-size:800px 630px;
-        background-image: url(../../img/phone/page-phone/galaxyS/03_galaxy_s_mb.jpeg);
+        background-image: url(../../img/phone/page-phone/galaxyA/backgroundA-mb.png);
         background-position-x: 36%;
         margin-left: 5%;
         margin-top: 65%;
-        width: 334px;
-        height: 510px;
+        width: 300px;
+        height: 400px;
     }
 
     .banner-z .text-z {
