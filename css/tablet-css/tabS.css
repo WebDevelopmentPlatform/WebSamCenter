@@ -90,7 +90,7 @@ html {
 
 .menu-mb {
     margin-left: 40px;
-    margin-right: -300px;
+    margin-right: -360px;
 }
 
 .list-menu-mb {
@@ -169,7 +169,8 @@ html {
 
 .banner-z {
     position: relative;
-    background-image: url(../../img/phone/page-phone/phuKienMB/backgroundPK.jpg);
+    background-repeat: no-repeat;
+    background-image: url(../../img/tab/page-tablet/tabS/background.jpg);
     width: 1440px;
     height: 328px;
     margin-top: 4%;
@@ -178,14 +179,14 @@ html {
 
 .banner-z .text-z {
     position: absolute;
-    transform: translateX(40%) translateY(100%);
+    transform: translateX(350%) translateY(160%);
     align-items: center;
     justify-content: right;
 }
 
 .banner-z .text-z h2 {
-    font-weight:720;
-    font-size: 40px; 
+    font-size: 43px;
+    font-weight: 750;
 }
 
 .lists-phone {
@@ -195,9 +196,10 @@ html {
     display: flex;
 }
 
+
+
 .lists-phone a,
 .lists-phone a:hover {
-    margin-top: 4%;
     text-decoration: none;
     color: #000;
     font-weight: 600;
@@ -208,14 +210,14 @@ html {
 
 .list-phone {
     width: 250px;
-    height: 373px;
+    height: 333px;
     margin: 0 12px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .list-phone img {
-    width: 200px;
-    height: 150px;
+    width: 240px;
+    height: 153px;
 }
 
 
@@ -230,32 +232,24 @@ html {
 
 /* End Content */
 
-
 /* Footer */
 .footer {
     margin-top: 12%;
 }
 
-
 /* Reponsive */
 @media (max-width: 768px) {
-
-    .logo-mb {
-    }
-
     .banner-z {
-        background-size:800px 630px;
-        background-image: url(../../img/phone/page-phone/phuKienMB/background-mb.jpg);
-        background-position-x: 46%;
-        margin-left: 8%;
+        background-position-x: 48%;
+        margin-left: 5%;
         margin-top: 65%;
-        width: 300px;
-        height: 300px;
+        width: 90%;
+        /* height: 210px; */
     }
 
     .banner-z .text-z {
         position: absolute;
-        transform: translateX(6%) translateY(-160%);
+        transform: translateX(6%) translateY(-186%);
         align-items: center;
         text-align: center;
         justify-content: right;
@@ -263,52 +257,34 @@ html {
 
 
     .list-phone {
-        /* margin: 0; */
-        width: 200px;
-        height: 280px;
-        margin-left: 24%;
+        margin: auto;
+        width: 165px;
+        height: 281px;
     }
 
     .list-phone img {
-        width: 122px;
+        width: 152px;
         height: 98px;
     }
 
     .list-phone .buy-phone {
         width: 112px;
-        height: 46px;
-        /* align-items: center !important; */
+        height: 48px;
+        margin-left: 8%;
     }
 
     .img-phone {
-        margin-left: -26px;
-    }
-
-    .infor-phone {
-        align-items: center;
-        justify-content: center;
+        margin-left: -16px;
     }
 
     .list-phone p {
-        width: 60px;
+        /* margin-left: 8px; */
+        padding-left: 24 px;
         font-size: 14px;
-        text-overflow: ellipsis;
     }
 
     .list-phone button {
-        width: 120px;
-        height: 30px;
-        margin-left: 32px;
+        width: 128px;
+        height: 32px;
     }
-
-    .cost-phone-mb {
-        margin-left:65px;
-    }
-
-    .name-phone {
-        width: 110px !important;
-        text-align: center;
-        align-items: center;
-        margin-left: 40px !important;
-    }
-}   
+}
