@@ -244,18 +244,19 @@ html {
     }
 
     .banner-z {
-        background-size:800px 630px;
+        background-size:180%;
+        background-repeat: no-repeat;
         background-image: url(../../img/phone/page-phone/phuKienMB/background-mb.jpg);
         background-position-x: 46%;
         margin-left: 8%;
-        margin-top: 65%;
+        margin-top: 32%;
         width: 300px;
         height: 300px;
     }
 
     .banner-z .text-z {
         position: absolute;
-        transform: translateX(6%) translateY(-160%);
+        transform: translateX(6%) translateY(-80%);
         align-items: center;
         text-align: center;
         justify-content: right;
@@ -264,13 +265,13 @@ html {
 
     .list-phone {
         /* margin: 0; */
-        width: 200px;
+        width: 130px;
         height: 280px;
         margin-left: 24%;
     }
 
     .list-phone img {
-        width: 122px;
+        width: 120px;
         height: 98px;
     }
 
@@ -281,7 +282,7 @@ html {
     }
 
     .img-phone {
-        margin-left: -26px;
+        margin-left: -6px;
     }
 
     .infor-phone {
@@ -298,17 +299,20 @@ html {
     .list-phone button {
         width: 120px;
         height: 30px;
-        margin-left: 32px;
+        margin-left: 6px;
     }
 
     .cost-phone-mb {
-        margin-left:65px;
+        margin-left:30px;
     }
 
     .name-phone {
         width: 110px !important;
         text-align: center;
         align-items: center;
-        margin-left: 40px !important;
+        margin-left: 6px !important;
+    }
+    .sale {
+        margin-left: 4px !important;
     }
 }   

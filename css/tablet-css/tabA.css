@@ -170,7 +170,7 @@ html {
 .banner-z {
     position: relative;
     background-repeat: no-repeat;
-    background-image: url(../../img/tab/page-tablet/tabS/background.jpg);
+    background-image: url(../../img/tab/page-tablet/tabA/backgroundPc.png);
     width: 1440px;
     height: 328px;
     margin-top: 4%;
@@ -179,7 +179,7 @@ html {
 
 .banner-z .text-z {
     position: absolute;
-    transform: translateX(350%) translateY(160%);
+    transform: translateX(300%) translateY(160%);
     align-items: center;
     justify-content: right;
 }
@@ -238,19 +238,31 @@ html {
 }
 
 /* Reponsive */
+@media (min-width: 768px){
+    .tabA-mb {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
+    .text-z {
+        display: none;
+    }
+
     .banner-z {
-        background-repeat: no-repeat;
-        background-size: 100%;
+        background-image: url(../../img/tab/page-tablet/tabA/backgroundTabAMB.png);
         background-position-x: 48%;
+        background-size: 100%;
         margin-left: 5%;
+        margin-top: 20%;
+        margin-bottom: 14%;
         width: 90%;
         /* height: 210px; */
     }
 
-    .banner-z .text-z {
+    .banner-z .tabA-mb {
         position: absolute;
-        transform: translateX(6%) translateY(-26%);
+        transform: translateX(6%) translateY(-186%);
         align-items: center;
         text-align: center;
         justify-content: right;

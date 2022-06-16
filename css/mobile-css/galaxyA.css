@@ -244,18 +244,18 @@ html {
     }
 
     .banner-z {
-        background-size:800px 630px;
+        background-repeat: no-repeat;
+        background-size:180%;
         background-image: url(../../img/phone/page-phone/galaxyA/backgroundA-mb.png);
         background-position-x: 36%;
         margin-left: 5%;
-        margin-top: 65%;
         width: 300px;
         height: 400px;
     }
 
     .banner-z .text-z {
         position: absolute;
-        transform: translateX(6%) translateY(-186%);
+        transform: translateX(6%) translateY(-10%);
         align-items: center;
         text-align: center;
         justify-content: right;

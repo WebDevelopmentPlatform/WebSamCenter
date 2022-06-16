@@ -234,15 +234,17 @@ html {
 /* Reponsive */
 @media (max-width: 768px){
     .banner-z {
+        background-size: 216%;
+        background-repeat: no-repeat;
         background-position-x:8% ;
         margin-left: 5%;
-        margin-top: 65%;
+        /* margin-top: 0%; */
         width: 334px;
         height: 510px;
     }
     .banner-z .text-z {
         position: absolute;
-        transform: translateX(6%) translateY(-186%);
+        transform: translateX(6%) translateY(-40%);
         align-items: center;
         text-align: center;
         justify-content: right;
