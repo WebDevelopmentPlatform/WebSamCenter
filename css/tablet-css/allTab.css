@@ -90,7 +90,7 @@ html {
 
 .menu-mb {
     margin-left: 40px;
-    margin-right: -360px;
+    margin-right: -300px;
 }
 
 .list-menu-mb {
@@ -167,7 +167,51 @@ html {
 
 /* Content */
 
-.banner-z {
+/* Tab S */
+
+.banner-tabS{
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url(../../img/tab/page-tablet/tabS/background.jpg);
+    width: 1440px;
+    height: 328px;
+    margin-top: 4%;
+    background-position-y: center;
+}
+
+.banner-tabS .text-tabS {
+    position: absolute;
+    transform: translateX(280%) translateY(160%);
+    align-items: center;
+    justify-content: right;
+}
+
+.banner-tabS .text-tabS h2 {
+    font-size: 50px ;
+    font-weight: 750;
+}
+
+@media (max-width: 768px) {
+    .banner-tabS {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-x: 48%;
+        margin-left: 5%;
+        width: 90%;
+        /* height: 210px; */
+    }
+
+    .banner-tabS .text-tabS {
+        position: absolute;
+        transform: translateX(6%) translateY(-26%);
+        align-items: center;
+        text-align: center;
+        justify-content: right;
+    }
+}
+
+/* Tab A */
+.banner-tabA {
     position: relative;
     background-repeat: no-repeat;
     background-image: url(../../img/tab/page-tablet/tabA/backgroundPc.png);
@@ -177,16 +221,74 @@ html {
     background-position-y: center;
 }
 
-.banner-z .text-z {
+.banner-tabA .text-tabA {
     position: absolute;
     transform: translateX(300%) translateY(160%);
     align-items: center;
     justify-content: right;
 }
 
-.banner-z .text-z h2 {
+.banner-tabA .text-tabA  h2 {
     font-size: 43px;
     font-weight: 750;
+}
+
+@media (min-width: 768px){
+    .tabA-mb {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-tabA {
+        display: none;
+    }
+
+    .banner-tabA {
+        background-image: url(../../img/tab/page-tablet/tabA/backgroundTabAMB.png);
+        background-position-x: 48%;
+        background-size: 100%;
+        margin-left: 5%;
+        margin-top: 20%;
+        margin-bottom: 14%;
+        width: 90%;
+        /* height: 210px; */
+    }
+
+    .banner-tabA .tabA-mb {
+        position: absolute;
+        transform: translateX(6%) translateY(-16%);
+        align-items: center;
+        text-align: center;
+        justify-content: right;
+    }
+
+    .cost-tabA-mb{
+        margin-left: 20% ;
+    }
+}
+
+
+/* phụ kiện */
+.banner-phukien {
+    position: relative;
+    background-image: url(../../img/tab/page-tablet/phukienTab/background.png);
+    width: 1440px;
+    height: 328px;
+    margin-top: 4%;
+    background-position-y: center;
+}
+
+.banner-phukien .phu-kien {
+    position: absolute;
+    transform: translateX(160%) translateY(80%);
+    align-items: center;
+    /* justify-content: right; */
+}
+
+.banner-phukien .phu-kien h2 {
+    font-weight:720;
+    font-size: 40px; 
 }
 
 .lists-phone {
@@ -196,10 +298,9 @@ html {
     display: flex;
 }
 
-
-
 .lists-phone a,
 .lists-phone a:hover {
+    margin-top: 4%;
     text-decoration: none;
     color: #000;
     font-weight: 600;
@@ -210,14 +311,14 @@ html {
 
 .list-phone {
     width: 250px;
-    height: 333px;
+    height: 373px;
     margin: 0 12px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .list-phone img {
-    width: 240px;
-    height: 153px;
+    width: 200px;
+    height: 150px;
 }
 
 
@@ -232,74 +333,93 @@ html {
 
 /* End Content */
 
+
 /* Footer */
 .footer {
     margin-top: 12%;
 }
 
+
 /* Reponsive */
-@media (min-width: 768px){
-    .tabA-mb {
-        display: none;
-    }
-}
-
 @media (max-width: 768px) {
-    .text-z {
-        display: none;
+
+    .logo-mb {
     }
 
-    .banner-z {
-        background-image: url(../../img/tab/page-tablet/tabA/backgroundTabAMB.png);
-        background-position-x: 48%;
-        background-size: 100%;
-        margin-left: 5%;
-        margin-top: 20%;
-        margin-bottom: 14%;
-        width: 90%;
-        /* height: 210px; */
+    .banner-phukien {
+        background-size:180%;
+        background-repeat: no-repeat;
+        background-image: url(../../img/tab/page-tablet/phukienTab/background.png);
+        margin-left: 8%;
+        margin-top: 32%;
+        width: 300px;
+        height: 300px;
     }
 
-    .banner-z .tabA-mb {
+    .banner-phukien .phu-kien {
         position: absolute;
-        transform: translateX(6%) translateY(-16%);
+        transform: translateX(6%) translateY(-80%);
         align-items: center;
         text-align: center;
         justify-content: right;
     }
 
+    .phu-kien h2{
+        font-size: 20px !important;
+        line-height: 20px;
+        text-align: left;
+    }
 
     .list-phone {
-        margin: auto;
-        width: 165px;
-        height: 281px;
+        /* margin: 0; */
+        width: 130px;
+        height: 280px;
+        margin-left: 24%;
     }
 
     .list-phone img {
-        width: 152px;
+        width: 120px;
         height: 98px;
     }
 
     .list-phone .buy-phone {
         width: 112px;
-        height: 48px;
-        margin-left: 8%;
+        height: 46px;
+        /* align-items: center !important; */
     }
 
     .img-phone {
-        margin-left: -16px;
+        margin-left: -6px;
     }
 
-    
+    .infor-phone {
+        align-items: center;
+        justify-content: center;
+    }
 
     .list-phone p {
-        /* margin-left: 8px; */
-        padding-left: 24px;
+        width: 60px;
         font-size: 14px;
+        text-overflow: ellipsis;
     }
 
     .list-phone button {
-        width: 128px;
-        height: 32px;
+        width: 120px;
+        height: 30px;
+        margin-left: 6px;
     }
-}
+
+    .cost-phone-mb {
+        margin-left:30px;
+    }
+
+    .name-phone {
+        width: 110px !important;
+        text-align: center;
+        align-items: center;
+        margin-left: 6px !important;
+    }
+    .sale {
+        margin-left: 4px !important;
+    }
+}   
