@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý đơn hàng</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/js.js"></script>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrapper container row">
+        <div class="sidebar col-md-3">
+            <div class="sidebar-header">
+                <h3>Admin</h3>
+            </div>
+            <div class="list-page">
+                <p>Trang chủ</p>
+                <li class="active">
+                    <a href="./manage.html">Quản lý sản phẩm</a>
+                </li>
+                <li>
+                    <a href="./single_manage.html">Quản lý đơn hàng</a>
+                </li>
+                <li>
+                    <a href="./account_manage.html">Quản lý tài khoản</a>
+                </li>
+                <li>
+                    <a href="./category_manage.html">Quản lý danh mục</a>
+                </li>
+                <li>
+                    <a href="/WebSamCenter/index.html">Về trang chủ</a>
+                </li>
+            </div>
+        </div>
+        <div class="content col-md-9">
+            <div class="input-group">
+                <input type="text" id="tukhoa" class="form-control" onkeyup="findTour()" onchange="findTour()" placeholder="Nhập để tìm kiếm">
+                <span class="input-group-btn">
+                  <button class="btn button-search mx-2" onclick="findTour()" type="button">Tìm kiếm</button>
+                </span>
+                <a href="./them-tour.html" class=" btn btn-primary mx-2">Thêm </a>
+                <!-- <a href="./sua-dia-danh.html" class=" btn btn-danger mx-2">Xoá </a> -->
+            </div>
+            <div class="alert alert-success" id="ThongBao"></div>
+            <h2>Quản lý sản phẩm</h2>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Mã đơn hàng</th>
+                    <th scope="col">Mã khách đặt hàng</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Ảnh</th>
+                    <th scope="col">Ghi chú</th>
+                    <th scope="col">Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>001</td>
+                    <td>123</td>
+                    <td>Galaxy Z</td>
+                    <td>
+                        <img src="/Website-SamCenter/img/phone/galaxyZ.png" alt="">
+                    </td>
+                    <td>Giao hàng nhanh giúp mình ạ</td>
+                    <td>
+                        <ul class="" id="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>001</td>
+                    <td>123</td>
+                    <td>Galaxy Z</td>
+                    <td>
+                        <img src="/Website-SamCenter/img/phone/galaxyZ.png" alt="">
+                    </td>
+                    <td>Giao hàng nhanh giúp mình ạ</td>
+                    <td>
+                        <ul class="" id="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>001</td>
+                    <td>123</td>
+                    <td>Galaxy Z</td>
+                    <td>
+                        <img src="/Website-SamCenter/img/phone/galaxyZ.png" alt="">
+                    </td>
+                    <td>Giao hàng nhanh giúp mình ạ</td>
+                    <td>
+                        <ul class="" id="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
