@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.43;
+    color: #303132;
+    background-color: #efefef;
+}   
+.sidebar{
+    background-color: #7386d5;
+    /* color: #fff; */
+    /* height: 100%; */
+}
+.list-page li a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+.list-page li{
+    list-style-type: none;
+}
+.sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+.sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+.list-page li a:hover{
+    background-color: #fff;
+    font-weight: bold;
+    color: #333;
+}

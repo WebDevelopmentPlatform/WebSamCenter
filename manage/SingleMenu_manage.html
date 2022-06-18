@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý đơn hàng</title>
+
+    <link rel="stylesheet" href="./css/style_manage.css">
+    <script src="./js/js.js"></script>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrapper container row">
+        <div class="sidebar col-md-3">
+            <div class="sidebar-header">
+                <h3>Admin</h3>
+            </div>
+            <div class="list-page">
+                <p>Trang chủ</p>
+                <li class="active">
+                    <a href="./manage.html">Quản lý sản phẩm</a>
+                </li>
+                <li>
+                    <a href="./SingleMenu_manage.html">Quản lý đơn hàng</a>
+                </li>
+                <li>
+                    <a href="./account_manage.html">Quản lý tài khoản</a>
+                </li>
+                <li>
+                    <a href="./category_manage.html">Quản lý danh mục</a>
+                </li>
+                <li>
+                    <a href="/WebSamCenter/index.html">Về trang chủ</a>
+                </li>
+            </div>
+        </div>
+        <div class="content col-md-9">
+            <div class="input-group">
+                <input type="text" id="tukhoa" class="form-control" onkeyup="findTour()" onchange="findTour()" placeholder="Nhập để tìm kiếm">
+                <span class="input-group-btn">
+                  <button class="btn button-search mx-2" onclick="findTour()" type="button">Tìm kiếm</button>
+                </span>
+                <a href="./them-tour.html" class=" btn btn-primary mx-2">Thêm </a>
+                <!-- <a href="./sua-dia-danh.html" class=" btn btn-danger mx-2">Xoá </a> -->
+            </div>
+            <div class="alert alert-success" id="ThongBao"></div>
+            <h2>Quản lý đơn hàng</h2>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Mã đơn hàng</th>
+                    <th scope="col">Mã khách đặt hàng</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Địa chỉ giao hàng</th>
+                    <th scope="col">Ngày đặt mua hàng</th>
+                    <th scope="col">Ảnh</th>
+                    <th scope="col">Ghi chú</th>
+                    <th scope="col">Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>00111</td>
+                    <td>123543</td>
+                    <td>Galaxy Z</td>
+                    <td>1</td>
+                    <td>Số nhà 58 Trần Duy Hưng,Thành Phố Hà Nội</td>
+                    <td>10/6/2022</td>
+                    <td>
+                        <img src="/WebSamCenter/img/phone/galaxyZ.png" alt="">
+                    </td>
+                    <td>Giao hàng nhanh giúp mình ạ</td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>00216</td>
+                    <td>1233543</td>
+                    <td>Galaxy A</td>
+                    <td>2</td>
+                    <td>Xóm 7, Thôn Quảng Tái, Xã Trung Tú, Huyện Ứng Hòa,Thành Phố Hà Nội</td>
+                    <td>8/6/2022</td>
+                    <td>
+                        <img src="/WebSamCenter/img/phone/galaxyA.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>0013</td>
+                    <td>123539</td>
+                    <td>Galaxy Watch 4</td>
+                    <td>1</td>
+                    <td>Số nhà 254 Minh Khai, Hai Bà Trưng, Thành Phố Hà Nội</td>
+                    <td>01/6/2022</td>
+                    <td>
+                        <img src="/WebSamCenter/img/watch/watch4.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>0032</td>
+                    <td>123444</td>
+                    <td>Dây đai</td>
+                    <td>1</td>
+                    <td>Số nhà 58 Chính Kinh,Thành Phố Hà Nội</td>
+                    <td>10/6/2022</td>
+                    <td>
+                        <img src="/WebSamCenter/img/watch/more_watch.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>00127</td>
+                    <td>123576</td>
+                    <td>Tai nghe AKG</td>
+                    <td>2</td>
+                    <td>Ngõ 467 Đường Lĩnh Nam, Lĩnh Nam, Hoàng Mai, Hà Nội</td>
+                    <td>25/6/2022</td>
+                    <td>
+                        <img src="/WebSamCenter/img/head_phone/AKG.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>00126</td>
+                    <td>123253</td>
+                    <td>Galaxy S</td>
+                    <td>1</td>
+                    <td>254 Ngọc Đại, xóm Tháp, Đại Mỗ, Hà Đông, Hà Nội</td>
+                    <td>14/6/2022</td>
+                    <td>
+                        <img src="/WebSamCenter/img/phone/galaxyS.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>00124</td>
+                    <td>123574</td>
+                    <td>Phụ kiện máy tính bảng Bao da</td>
+                    <td>1</td>
+                    <td>69 Ngõ 35 Phố Nguyễn An Ninh, Tương Mai, Hoàng Mai, Hà Nội</td>
+                    <td>10/6/2002</td>
+                    <td>
+                        <img src="/WebSamCenter/img/tab/phu_kien_tab.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>00183</td>
+                    <td>123253</td>
+                    <td>Galaxy Z</td>
+                    <td>1</td>
+                    <td>Số nhà 58 Trần Duy Hưng,Thành Phố Hà Nội</td>
+                    <td>10/6/2002</td>
+                    <td>
+                        <img src="/WebSamCenter/img/phone/galaxyZ.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>00184</td>
+                    <td>123753</td>
+                    <td>Galaxy S</td>
+                    <td>1</td>
+                    <td>69 Ngõ 35 Phố Nguyễn An Ninh, Tương Mai, Hoàng Mai, Hà Nội</td>
+                    <td>10/6/2002</td>
+                    <td>
+                        <img src="/WebSamCenter/img/phone/galaxyS.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>0018</td>
+                    <td>12365</td>
+                    <td>Tai nghe AKG</td>
+                    <td>1</td>
+                    <td>Số nhà 58 Trần Duy Hưng,Thành Phố Hà Nội</td>
+                    <td>10/6/2002</td>
+                    <td>
+                        <img src="/WebSamCenter/img/head_phone/AKG.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>0012</td>
+                    <td>123342</td>
+                    <td>Phụ kiện máy tính bảng Bao da</td>
+                    <td>1</td>
+                    <td>5b Phố Cao Đạt, Lê Đại Hành, Đống Đa, Hà Nội</td>
+                    <td>01/6/2002</td>
+                    <td>
+                        <img src="/WebSamCenter/img/tab/phu_kien_tab.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">12</th>
+                    <td>0010</td>
+                    <td>123273</td>
+                    <td>Galaxy S</td>
+                    <td>1</td>
+                    <td>5b Phố Cao Đạt, Lê Đại Hành, Đống Đa, Hà Nội</td>
+                    <td>12/6/2002</td>
+                    <td>
+                        <img src="/WebSamCenter/img/phone/galaxyS.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">13</th>
+                    <td>0018</td>
+                    <td>123638</td>
+                    <td>Galaxy Watch 4 classic</td>
+                    <td>1</td>
+                    <td>72 Phố Trần Đại Nghĩa, Đồng Tâm, Hai Bà Trưng, Hà Nội</td>
+                    <td>10/6/2022</td>
+                    <td>
+                        <img src="/WebSamCenter/img/watch/watch4_clasic.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">14</th>
+                    <td>0011</td>
+                    <td>123473</td>
+                    <td>Galaxy Watch 4</td>
+                    <td>1</td>
+                    <td>02 Phố Trần Đại Nghĩa, Đồng Tâm, Hai Bà Trưng, Hà Nội</td>
+                    <td>10/6/2022</td>
+                    <td>
+                        <img src="/WebSamCenter/img/watch/watch4.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td>0016</td>
+                    <td>123353</td>
+                    <td>Galaxy Buds</td>
+                    <td>5</td>
+                    <td>86 Lê Trọng Tấn, Khương Mai, Thanh Xuân, Hà Nội</td>
+                    <td>18/6/2022</td>
+                    <td>
+                        <img src="/WebSamCenter/img/head_phone/buds.png" alt="">
+                    </td>
+                    <td></td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa </a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">16</th>
+                    <td>0013</td>
+                    <td>123545</td>
+                    <td>Galaxy Fit</td>
+                    <td>1</td>
+                    <td>Số nhà 158 Trần Duy Hưng,Cầu Giấy,Thành Phố Hà Nội</td>
+                    <td>18/5/2002</td>
+                    <td>
+                        <img src="/WebSamCenter/img/watch/fit.png" alt="">
+                    </td>
+                    <td>Giao hàng đảm bảo chất lượng nhé</td>
+                    <td>
+                        <ul class="">
+                            <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
+                            <li><a href="#">Sửa</a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
