@@ -4,7 +4,7 @@
 // git push
 
 //Lấy file
-//git tull
+//git pull
 
 
 //Tạo biến truy cập đến class rồi xử lý
@@ -61,7 +61,13 @@ btnPK.addEventListener('click', function () {
 
 });
 
+//button search
+let btnSearch = document.querySelector('.button-search')
+let frmSearch = document.querySelector('.form-search')
 
+btnSearch.addEventListener('click', function(){
+    frmSearch.classList.add('active')
+});
 
 //reponsive footer
 let thongTin1 = document.querySelector('.tt1')
@@ -143,4 +149,5 @@ function showSlides(n) {
    
 
 //---End content---
+
 

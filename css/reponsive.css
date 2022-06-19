@@ -3,7 +3,7 @@
     .menu-nav-mb,
     .menu-lists-mb,
     .header-mb,
-    .sub1-mb, .sub2-mb, .address-mb {
+    .sub1-mb, .sub2-mb, .address-mb, .form-search{
         display: none ;
     }
     
@@ -16,7 +16,7 @@
     .list_samsung,
     .tabs-control,
     .menu-nav, .slideshow-container,
-    .sub-slider2 {
+    .sub-slider2,  .form-search {
         display: none;
     }
     
@@ -30,7 +30,7 @@
     .list_samsung,
     .tabs-control,
     .menu-nav, .slideshow-container,
-    .sub-slider2 {
+    .sub-slider2, .form-search {
         display: none;
     }
 
