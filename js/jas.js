@@ -134,19 +134,7 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "flex";
     dots[slideIndex - 1].className += " active";
 }
-// End sub slider1 PC,Tablet
-
-// Begin sub slider 1 mobile
-// End sub slider 1 mobile
-
-// slick js
-// $('.autoplay').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-//   });
-   
+  
 
 //---End content---
 

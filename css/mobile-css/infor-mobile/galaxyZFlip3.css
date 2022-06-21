@@ -243,3 +243,93 @@
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+/* Phần đánh giá, nhận xét, thông số kỹ thuật của sản phẩm */
+
+.content-describe {
+  margin-top: 8%;
+
+}
+
+.item-describe {
+  display: flex;
+  margin-top:5%;
+  margin-bottom: 5%;
+}
+
+.text-item-describe {
+  width: 60%;
+  /* margin-left: 4%;; */
+}
+
+.img-item-describe img {
+  width: 80%;
+  /* margin-left: 4%;;
+  margin-right: 4%; */
+}
+
+.society-nav {
+  font-size: 18px;
+  display: flex;
+}
+
+.comment-now {
+  margin-left: 4%;
+}
+
+.item-society {
+  margin-left: 4%;
+}
+
+.content-judge,
+.more-parameter,
+.input-comment {
+  display: none;
+  margin:4%;
+}
+
+.content-judge h3{
+  margin: 4%;
+  font-size: 20px !important; 
+  font-weight:560;
+}
+
+.star-judge {
+  display: flex;
+  height: 20px;
+  margin-top: -2%;
+  
+}
+
+.star-judge p {
+  font-size: 16px !important;
+  margin-top: -0.4%;
+  margin-left: 4%;
+}
+
+.stars {
+  display: flex;
+  list-style-type: none;
+}
+
+.stars i {
+  color: #f0ad4e;
+}
+
+.comment-judge {
+  font-size: 16px;
+  margin-top: 2%;
+  margin-left: 4%;
+}
+.table {
+  font-size: 16px;
+  /* margin-left: 4%; */
+  margin-right: 4%;
+}
+
+.table th {
+  text-align: center;
+}
+.table td {
+  width: 80%;
+}
