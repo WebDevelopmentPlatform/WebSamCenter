@@ -246,6 +246,10 @@
 
 /* Phần đánh giá, nhận xét, thông số kỹ thuật của sản phẩm */
 
+.item-society:hover {
+  cursor: pointer;
+}
+
 .content-describe {
   margin-top: 8%;
 
@@ -332,4 +336,35 @@
 }
 .table td {
   width: 80%;
+}
+
+/* reponsive  */
+@media (max-width: 768px){
+  .content-infor {
+    display: block;
+  }
+  .item-describe {
+    display: block;
+    text-align: center;
+  }
+  .custom-select {
+    width: 80% !important;
+  }
+  .society-nav {
+    margin-top: 30%;
+  }
+  .item-society {
+    font-size: 14px;
+  }
+  .text-item-describe {
+    text-align: center;
+    width: 90%;
+  }
+
+  .img-item-describe {
+    order: 2 !important;
+  }
+  .text-item-describe {
+    order: 1 !important;
+  }
 }
