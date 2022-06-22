@@ -1,5 +1,4 @@
 
-
 var objPeople = [
     { // Object @ 0 index
         username: "nguyentien",
@@ -15,19 +14,15 @@ var objPeople = [
     }
 
 ]
-const btn = document.querySelector(".btn");
-
 function getInfo() {
     var username = document.getElementById('username').value
     var password = document.getElementById('password').value
-    btn.addEventListener('click', function () {
-        for (var i = 0; i < objPeople.length; i++) {
-            // check is user input matches username and password of a current index of the objPeople array
-            if (username == objPeople[i].username && password == objPeople[i].password) {
-                alert("Đăng nhập thành công.");
-                // stop the function if this is found to be true
+    for (var i = 0; i < objPeople.length; i++) {
+        if (username == objPeople[i].username && password == objPeople[i].password) {
+            // window.location.href = "../manage.html"
+            window.open("../manage.html")
+            // alert("d")
 
-            }
-        })
-
+        }
+    }
 }
