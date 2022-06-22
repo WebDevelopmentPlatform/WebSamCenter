@@ -1,313 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản Lý tài khoản</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản Lý tài khoản</title>
 
-    <link rel="stylesheet" href="./css/style_manage.css">
-    <script src="./js/js.js"></script>
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style_manage.css">
+  <script src="./js/js.js"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+
 <body>
-    <div class="wrapper container row">
-        <div class="sidebar col-md-3">
-            <div class="sidebar-header">
-                <h3>Admin</h3>
-            </div>
-            <div class="list-page">
-                <p>Trang chủ</p>
-                <li class="active">
-                    <a href="./manage.html">Quản lý sản phẩm</a>
-                </li>
-                <li>
-                    <a href="./SingleMenu_manage.html">Quản lý đơn hàng</a>
-                </li>
-                <li>
-                    <a href="./account_manage.html">Quản lý thông tin khách hàng</a>
-                </li>
-                <li>
-                    <a href="./category_manage.html">Quản lý danh mục</a>
-                </li>
-                <li>
-                    <a href="/WebSamCenter/index.html">Về trang chủ</a>
-                </li>
-            </div>
-        </div>
-        <div class="content col-md-9">
-            <div class="input-group">
-                <input type="text" id="tukhoa" class="form-control" onkeyup="findTour()" onchange="findTour()" placeholder="Nhập để tìm kiếm">
-                <span class="input-group-btn">
-                  <button class="btn button-search mx-2" onclick="findTour()" type="button">Tìm kiếm</button>
-                </span>
-                <a href="./them-tour.html" class=" btn btn-primary mx-2">Thêm </a>
-                <!-- <a href="./sua-dia-danh.html" class=" btn btn-danger mx-2">Xoá </a> -->
-            </div>
-            <div class="alert alert-success" id="ThongBao"></div>
-            <div class="title">
-              <h2>Quản lý thông tin khách hàng</h2>
-          </div>
-            
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Mã khách hàng</th>
-                    <th scope="col">Họ tên khách hàng</th>
-                    <th scope="col">Địa chỉ</th>
-                    <th scope="col">Số điện thoại</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Trạng thái</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>123</td>
-                    <td>Nguyễn việt tiến</td>
-                    <td>Xóm 7, Cao Xá, Trung Tú, Ứng Hòa, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>nguyentientlu3624@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>123</td>
-                    <td>Nguyễn Minh Quang</td>
-                    <td>Xóm 10, Quảng Tái, Trung Tú, Ứng Hòa, Hà Nội</td>
-                    <td>0357 859 289</td>
-                    <td>minhquang@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>123</td>
-                    <td>Nguyễn Đình Thắng</td>
-                    <td>Ngõ 5, Ngách 10, Đống Đa, Tây Sơn, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>nguyenThang2002@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>1223</td>
-                    <td>Nguyễn Văn An</td>
-                    <td>458 Phố Minh Khai, Khu đô thị Times City, Vĩnh Tuy, Hai Bà Trưng, Hà Nội </td>
-                    <td>0328 858 198</td>
-                    <td>nguyenThang2002@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>12283</td>
-                    <td>Nguyễn Thị Cúc</td>
-                    <td>97 Phố Triều Khúc, Triều Khúc, Tân Triều, Thanh Trì, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>nguyenCuc@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>12258</td>
-                    <td>Nguyễn Thị Hồng</td>
-                    <td>373 Phố Ngô Quyền, Phan Chu Trinh, Hoàn Kiếm, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>HongNguyen2@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">7</th>
-                    <td>12283</td>
-                    <td>Đinh văn Tuyến</td>
-                    <td>57 Phố Bùi Thị Xuân, Bùi Thị Xuân, Hai Bà Trưng, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>Heocon99@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">8</th>
-                    <td>1228</td>
-                    <td>Nguyễn Văn Cu</td>
-                    <td>68 Phố Triều Khúc, Triều Khúc, Tân Triều, Thanh Trì, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>ConcuNho02@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">9</th>
-                    <td>1237</td>
-                    <td>Nguyễn Đích Nhân</td>
-                    <td>458 Phố Minh Khai, Khu đô thị Times City, Vĩnh Tuy, Hai Bà Trưng, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>nguyen02@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">10</th>
-                    <td>1274</td>
-                    <td>Nguyễn Thị Cúc</td>
-                    <td>357 Nguyễn Khoái, Lĩnh Nam, Hoàng Mai, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>nguyenCuc2002@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">11</th>
-                    <td>1429</td>
-                    <td>Hoàng Văn Anh</td>
-                    <td>47 Phố Bùi Thị Xuân, Bùi Thị Xuân, Hai Bà Trưng, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>VanAnh1999@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">12</th>
-                    <td>1072</td>
-                    <td>Nguyễn Văn Đức</td>
-                    <td>85 Nguyễn Khoái, Lĩnh Nam, Hoàng Mai, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>HoangDuc@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">13</th>
-                    <td>1372</td>
-                    <td>Nguyễn Hoàng Anh</td>
-                    <td>58 Phố Minh Khai, Vĩnh Tuy, Hai Bà Trưng, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>nguyenhoanganh@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">14</th>
-                    <td>1246</td>
-                    <td>Nguyễn Bi</td>
-                    <td>37 Phố Ngô Quyền, Phan Chu Trinh, Hoàn Kiếm, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>nguyenBi96@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">15</th>
-                    <td>1342</td>
-                    <td>Nguyễn Anh</td>
-                    <td>Ngõ 5</td>
-                    <td>0328 858 198</td>
-                    <td>nguyenAnh@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">16</th>
-                    <td>1362</td>
-                    <td>Đinh Văn Tín</td>
-                    <td>785 Nguyễn Khoái, Lĩnh Nam, Hoàng Mai, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>nguyenTin02@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">17</th>
-                    <td>1246</td>
-                    <td>Nguyễn Đình Thắng</td>
-                    <td>45 Phố Minh Khai, Vĩnh Tuy, Hai Bà Trưng, Hà Nội</td>
-                    <td>0328 858 198</td>
-                    <td>nguyenThang2002@gmail.com</td>
-                    <td>
-                      <ul class="" id="">
-                        <li><div data-toggle="modal" data-target="#confirmModal" class="delete" onclick="showModalDeleteLocation('002')">Xoá</div></li>
-                        <li><a href="#">Sửa </a></li>
-                      </ul>
-                  </td>
-                  </tr>
-
-                </tbody>
-              </table>
-        </div>
+  <div class="wrapper container row">
+    <div class="sidebar col-md-3">
+      <div class="sidebar-header">
+        <h3>Admin</h3>
+      </div>
+      <div class="list-page">
+        <p>Trang chủ</p>
+        <li class="active">
+          <a href="./manage.html">Quản lý sản phẩm</a>
+        </li>
+        <li>
+          <a href="./SingleMenu_manage.html">Quản lý đơn hàng</a>
+        </li>
+        <li>
+          <a href="./account_manage.html">Quản lý thông tin khách hàng</a>
+        </li>
+        <li>
+          <a href="./category_manage.html">Quản lý danh mục</a>
+        </li>
+        <li>
+          <a href="../index.html">Về trang chủ</a>
+        </li>
+      </div>
     </div>
+    <div class="content col-md-9">
+      <div class="input-group">
+        <input type="text" id="tukhoa" class="form-control" onkeyup="findTour()" onchange="findTour()"
+          placeholder="Nhập để tìm kiếm">
+        <span class="input-group-btn">
+          <button class="btn button-search mx-2" onclick="findTour()" type="button">Tìm kiếm</button>
+        </span>
+        <a href="./them-tour.html" class=" btn btn-primary mx-2">Thêm </a>
+        <!-- <a href="./sua-dia-danh.html" class=" btn btn-danger mx-2">Xoá </a> -->
+      </div>
+      <div class="alert alert-success" id="ThongBao"></div>
+      <div class="title">
+        <h2>Quản lý thông tin khách hàng</h2>
+      </div>
 
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Mã khách hàng</th>
+            <th scope="col">Họ tên khách hàng</th>
+            <th scope="col">Địa chỉ</th>
+            <th scope="col">Số điện thoại</th>
+            <th scope="col">Email</th>
+            <th scope="col">Trạng thái</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>123</td>
+            <td>Nguyễn việt tiến</td>
+            <td>Xóm 7, Cao Xá, Trung Tú, Ứng Hòa, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>nguyentientlu3624@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>123</td>
+            <td>Nguyễn Minh Quang</td>
+            <td>Xóm 10, Quảng Tái, Trung Tú, Ứng Hòa, Hà Nội</td>
+            <td>0357 859 289</td>
+            <td>minhquang@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>123</td>
+            <td>Nguyễn Đình Thắng</td>
+            <td>Ngõ 5, Ngách 10, Đống Đa, Tây Sơn, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>nguyenThang2002@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>1223</td>
+            <td>Nguyễn Văn An</td>
+            <td>458 Phố Minh Khai, Khu đô thị Times City, Vĩnh Tuy, Hai Bà Trưng, Hà Nội </td>
+            <td>0328 858 198</td>
+            <td>nguyenThang2002@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>12283</td>
+            <td>Nguyễn Thị Cúc</td>
+            <td>97 Phố Triều Khúc, Triều Khúc, Tân Triều, Thanh Trì, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>nguyenCuc@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>12258</td>
+            <td>Nguyễn Thị Hồng</td>
+            <td>373 Phố Ngô Quyền, Phan Chu Trinh, Hoàn Kiếm, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>HongNguyen2@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>12283</td>
+            <td>Đinh văn Tuyến</td>
+            <td>57 Phố Bùi Thị Xuân, Bùi Thị Xuân, Hai Bà Trưng, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>Heocon99@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>1228</td>
+            <td>Nguyễn Văn Cu</td>
+            <td>68 Phố Triều Khúc, Triều Khúc, Tân Triều, Thanh Trì, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>ConcuNho02@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>1237</td>
+            <td>Nguyễn Đích Nhân</td>
+            <td>458 Phố Minh Khai, Khu đô thị Times City, Vĩnh Tuy, Hai Bà Trưng, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>nguyen02@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>1274</td>
+            <td>Nguyễn Thị Cúc</td>
+            <td>357 Nguyễn Khoái, Lĩnh Nam, Hoàng Mai, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>nguyenCuc2002@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td>1429</td>
+            <td>Hoàng Văn Anh</td>
+            <td>47 Phố Bùi Thị Xuân, Bùi Thị Xuân, Hai Bà Trưng, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>VanAnh1999@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>1072</td>
+            <td>Nguyễn Văn Đức</td>
+            <td>85 Nguyễn Khoái, Lĩnh Nam, Hoàng Mai, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>HoangDuc@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
+            <td>1372</td>
+            <td>Nguyễn Hoàng Anh</td>
+            <td>58 Phố Minh Khai, Vĩnh Tuy, Hai Bà Trưng, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>nguyenhoanganh@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">14</th>
+            <td>1246</td>
+            <td>Nguyễn Bi</td>
+            <td>37 Phố Ngô Quyền, Phan Chu Trinh, Hoàn Kiếm, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>nguyenBi96@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">15</th>
+            <td>1342</td>
+            <td>Nguyễn Anh</td>
+            <td>Ngõ 5</td>
+            <td>0328 858 198</td>
+            <td>nguyenAnh@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">16</th>
+            <td>1362</td>
+            <td>Đinh Văn Tín</td>
+            <td>785 Nguyễn Khoái, Lĩnh Nam, Hoàng Mai, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>nguyenTin02@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">17</th>
+            <td>1246</td>
+            <td>Nguyễn Đình Thắng</td>
+            <td>45 Phố Minh Khai, Vĩnh Tuy, Hai Bà Trưng, Hà Nội</td>
+            <td>0328 858 198</td>
+            <td>nguyenThang2002@gmail.com</td>
+            <td>
+              <ul class="" id="">
+                <li>
+                  <div data-toggle="modal" data-target="#confirmModal" class="delete"
+                    onclick="showModalDeleteLocation('002')">Xoá</div>
+                </li>
+                <li><a href="#">Sửa </a></li>
+              </ul>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
