@@ -24,8 +24,5 @@ top: 10px;
 .paragraph{
 font-size: 20px;
 }
-.paragraph-fix{
-    display:flex;
-    margin-top: -500px;
-}
+
 
