@@ -1,0 +1,31 @@
+/* 
+video{
+    width: 30%;
+    height: 200px;
+    float: left;
+
+}
+.container-intro{
+    width: 200px;
+    float: right;
+    text-align: center;
+}
+.container-head1{
+top: 10px;
+} */
+
+.intro{
+    display: flex;
+    width: 25%;
+    height: 25%;
+    margin-top: 0px;
+   
+}
+.paragraph{
+font-size: 20px;
+}
+.paragraph-fix{
+    display:flex;
+    margin-top: -500px;
+}
+
