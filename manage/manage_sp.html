@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý sản phẩm</title>
+    <link rel="stylesheet" href="./css/style_manage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="wrapper container row">
+        <div class="sidebar col-md-3">
+            <div class="sidebar-header">
+                <h3>
+                    Admin
+                </h3>
+            </div>
+            <div class="list-page" style="color: #fff; ">
+                <!-- <p>
+                    <a href="/WebSamCenter/index.html" style="text-decoration: none">Trang chủ</a>
+                </p> -->
+
+                <li class="active">
+                    <a href="./manage_sp.html">Quản lý sản phẩm</a>
+                </li>
+                <li>
+                    <a href="./SingleMenu_manage.html">Quản lý đơn hàng</a>
+                </li>
+                <li>
+                    <a href="./account_manage.html">Quản lý thông tin khách hàng</a>
+                </li>
+                <li>
+                    <a href="./category_manage.html">Quản lý danh mục</a>
+                </li>
+                <li>
+                    <a href="../index.html">Về trang chủ</a>
+                </li>
+            </div>
+        </div>
+        <div class="content col-md-9">
+            <div class="input-group">
+                <input type="text" id="tukhoa" class="form-control" placeholder="Nhập để tìm kiếm">
+                <span class="input-group-btn">
+                    <button class="btn button-search mx-2" onclick="findTour()" type="button">Tìm kiếm</button>
+                </span>
+            </div>
+            <div class="alert alert-success" id="ThongBao"></div>
+            <div class="title">
+                <h2>Quản lý sản phẩm</h2>
+            </div>
+            <div class="form col-md-10">
+                <div>
+                    <label for="id">Mã sản phẩm</label>
+                    <input type="number" id="id">
+                </div>
+                <div>
+                    <label for="name_sp">Tên sản phẩm</label>
+                    <input type="text" id="name_sp">
+                </div>
+                <div>
+                    <label for="price">Giá bán </label>
+                    <input type="number" id="price">
+                </div>
+                <div>
+                    <button onclick="add()">Thêm</button>
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá bán</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+        </div>
+        <script>
+            var data = [{
+                id: 10423,
+                name: 'Galaxy S20 FE - (G780) - TBH',
+                price: 10490000,
+            },
+            {
+                id: 22423,
+                name: 'Galaxy Tab A8 - (SM-X205)',
+                price: 26790000,
+            },
+            {
+                id: 324,
+                name: 'Galaxy Z Fold3 5G - (SM-F926)',
+                price: 31290000,
+            },
+            {
+                id: 122,
+                name: 'Galaxy Tab A7',
+                price: 6990000,
+            },
+            {
+                id: 2352,
+                name: 'Galaxy Z Flip3 5G - (SM-F711)',
+                price: 26990030,
+            },
+            {
+                id: 2578,
+                name: 'Tai nghe có dây 3.5 mm (EO - IA 500) ',
+                price: 300000,
+            },
+            {
+                id: 5784,
+                name: 'Galaxy Tab A7 Lite - (SM-T225)',
+                price: 1690000,
+            },
+            {
+                id: 1246,
+                name: 'Tai nghe AKG Type C ',
+                price: 500500,
+            },
+            ]
+            window.addEventListener('DOMContentLoaded', render(data))
+            function add() {
+                var item_id = document.getElementById("id").value
+                var item_name = document.getElementById("name_sp").value
+                var item_price = document.getElementById("price").value
+                var item = {
+                    id: item_id,
+                    name: item_name,
+                    price: item_price
+                }
+                data.push(item)
+                render(data)
+                // Clear()
+            }
+            function render(data) {
+                let table = data.map(e => {
+                    return `<tr>
+                        <td>${e.id}</td>
+                        <td>${e.name}</td>
+                        <td>${e.price}</td>
+                        <td><ul class="" id="">
+                                <li>
+                                    <btn class="delete" onclick="deleteItem(${e.id})">Xoá</btn>
+                                </li>
+                                <li><a href="../manage/fix/manage_fix.html">Sửa </a></li>
+                            </ul></td>
+</td>
+
+</tr>`
+                })
+                document.querySelector('tbody').innerHTML = table.join("")
+            }
+
+            function Clear() {
+                document.getElementById("id").value = ""
+                document.getElementById("name_sp").value = ""
+                document.getElementById("price").value = ""
+            }
+            function deleteItem(x) {
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].id == x) {
+                        data.splice(i, 1)
+                        render(data)
+                    }
+                }
+            }
+            // function editItem(x) {
+            //     for (let i = 0; i < data.length; i++) {
+            //         if (data[i].id == x) {
+            //             document.getElementById("id").value = data[i].id
+            //             document.getElementById("name_sp").value = data[i].name_sp
+            //             document.getElementById("price").value = data[i].price
+            //         }
+            //     }
+            // }
+        </script>
+</body>
+
+</html>
